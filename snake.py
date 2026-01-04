@@ -49,13 +49,13 @@ def next_turn(snake, food):
         x +=SPACE_SIZE
 
 
-        snake.coordinates.insert(0, (x, y))
+    snake.coordinates.insert(0, (x, y))
 
-        square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
+    square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
 
-        snake.squares.insert(0, square)
+    snake.squares.insert(0, square)
 
-        window.after(SPEED, next_turn, snake, food)
+    window.after(SPEED, next_turn, snake, food)
 def change_direction(new_direction):
     pass
 
